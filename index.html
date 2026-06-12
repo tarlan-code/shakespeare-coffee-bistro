@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Shakespeare Coffee &amp; Bistro — Coffee shop</title>
+<meta name="description" content="Shakespeare Coffee &amp; Bistro — 11 Aziz Aliyev St, Baku 1000. 4.5★ (526 rəy).">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--a:#5b3a29;--b:#a87044;--accent:#c08552;--bg:#fbf7f2;--ink:#1d1d1f;--muted:#6b6b70;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+h1,h2,h3{font-family:'Poppins',Inter,serif;line-height:1.15}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.narrow{max-width:680px}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-bottom:1px solid #0001}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1080px;margin:0 auto;padding:0 22px}
+.brand{font-family:'Poppins',serif;font-weight:700;color:var(--a);font-size:1.15rem;text-decoration:none}
+.menu{display:flex;gap:22px;align-items:center}
+.menu a{color:var(--ink);text-decoration:none;font-size:.92rem;font-weight:500}
+.menu a:hover{color:var(--accent)}
+.langs{display:flex;gap:4px;margin-left:10px}
+.lang-btn{border:1px solid var(--a);background:none;color:var(--a);border-radius:6px;padding:3px 8px;font-size:.74rem;font-weight:600;cursor:pointer}
+.lang-btn.active{background:var(--a);color:#fff}
+.burger{display:none;font-size:1.6rem;background:none;border:none;color:var(--a);cursor:pointer}
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;color:#fff;text-align:center;padding:90px 0 40px}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(20,10,5,.55),rgba(20,10,5,.65)),url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAGDNifmnkpK1kX1AMYRqmnlqen7sJEe3HK1fgfvtxBc1YTu4a96x-RPUgT49bqvC2oRM5Irsrjv8IOUj7hwBdbCdbwVSrxvg-0q77gIQl3emArRN3LeP_xpS0ujkjtrUuvqSYjj=w1600-h900-k-no');background-size:cover;background-position:center;z-index:-1}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);margin-bottom:14px;text-shadow:0 2px 20px #0006}
+.hero .tag{font-size:1.05rem;opacity:.95;margin-bottom:18px}
+.rating{display:inline-flex;align-items:center;gap:10px;background:#fff2;border:1px solid #fff4;padding:8px 16px;border-radius:40px;margin-bottom:26px;font-weight:600}
+.rating .num{font-size:1.2rem}.rating .st{color:#ffc83d}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:10px;font-weight:600;text-decoration:none;font-size:.96rem;transition:.2s}
+.btn.primary{background:var(--accent);color:#fff}.btn.primary:hover{filter:brightness(1.08)}
+.btn.ghost{background:#fff;color:var(--a)}.btn.ghost:hover{background:#fff;transform:translateY(-1px)}
+.sec{padding:72px 0}.sec.alt{background:#fff}
+.sec h2{font-size:clamp(1.6rem,4vw,2.3rem);color:var(--a);margin-bottom:28px;text-align:center}
+.about p{font-size:1.08rem;color:#3a3a3f;max-width:760px;margin:0 auto;text-align:center}
+.feats{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;max-width:840px;margin:0 auto}
+.feats li{background:var(--bg);border:1px solid #0000000d;border-left:3px solid var(--accent);padding:13px 16px;border-radius:8px;font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:24px}
+.chip{background:var(--a);color:#fff;padding:5px 14px;border-radius:30px;font-size:.82rem}
+.grid-gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.gimg{height:210px;background-size:cover;background-position:center;border-radius:12px;cursor:pointer;transition:.3s;box-shadow:0 4px 16px #0001}
+.gimg:hover{transform:scale(1.02)}
+.grid-rev{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.rev{background:var(--bg);border:1px solid #0000000d;border-radius:14px;padding:22px}
+.rev .stars{color:#ffc83d;margin-bottom:8px}
+.rev p{color:#3a3a3f;font-size:.97rem;margin-bottom:12px}
+.rev cite{color:var(--muted);font-style:normal;font-weight:600;font-size:.9rem}
+.hours{width:100%;border-collapse:collapse}
+.hours tr{border-bottom:1px solid #0000000f}
+.hours th{text-align:left;padding:12px 0;font-weight:600}
+.hours td{text-align:right;padding:12px 0;color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:880px;margin:0 auto}
+.cinfo{display:flex;flex-direction:column;gap:18px}
+.cinfo .row{display:flex;gap:12px;align-items:flex-start}
+.cinfo .ico{width:40px;height:40px;flex:0 0 40px;background:var(--a);color:#fff;border-radius:10px;display:grid;place-items:center;font-size:1.1rem}
+.cinfo a{color:var(--a);text-decoration:none;font-weight:600}
+.mapcard{border-radius:14px;overflow:hidden;min-height:240px;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;color:#fff;text-decoration:none;text-align:center;padding:20px}
+footer{background:var(--a);color:#fff;text-align:center;padding:34px 22px;font-size:.9rem}
+footer .demo{opacity:.7;font-size:.8rem;margin-top:8px}
+footer a{color:#fff;font-weight:600}
+@media(max-width:760px){.menu{position:fixed;top:64px;left:0;right:0;flex-direction:column;background:#fff;padding:16px;gap:14px;transform:translateY(-150%);transition:.3s;box-shadow:0 10px 30px #0002}.menu.open{transform:translateY(0)}.burger{display:block}.contact-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><nav class="nav">
+  <a href="#" class="brand">Shakespeare Coffee &amp; Bistro</a>
+  <button class="burger" aria-label="menu">☰</button>
+  <div class="menu">
+    <a href="#about"><span data-i18n='{&quot;az&quot;:&quot;Haqqımızda&quot;,&quot;en&quot;:&quot;About&quot;,&quot;ru&quot;:&quot;О нас&quot;}'>Haqqımızda</span></a>
+    <a href="#menu"><span data-i18n='{&quot;az&quot;:&quot;Xidmətlər&quot;,&quot;en&quot;:&quot;Services&quot;,&quot;ru&quot;:&quot;Услуги&quot;}'>Xidmətlər</span></a>
+    
+    
+    <a href="#hours"><span data-i18n='{&quot;az&quot;:&quot;İş saatları&quot;,&quot;en&quot;:&quot;Hours&quot;,&quot;ru&quot;:&quot;Часы работы&quot;}'>İş saatları</span></a>
+    <a href="#contact"><span data-i18n='{&quot;az&quot;:&quot;Əlaqə&quot;,&quot;en&quot;:&quot;Contact&quot;,&quot;ru&quot;:&quot;Контакты&quot;}'>Əlaqə</span></a>
+    <div class="langs"><button class="lang-btn active" data-lang="az">AZ</button><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="ru">RU</button></div>
+  </div>
+</nav></header>
+
+<section class="hero"><div class="wrap">
+  <h1>Shakespeare Coffee &amp; Bistro</h1>
+  <p class="tag">Coffee shop</p>
+  <div class="rating"><span class="st">★</span><span class="num">4.5</span><span>· 526 <span data-i18n='{&quot;az&quot;:&quot;rəy&quot;,&quot;en&quot;:&quot;reviews&quot;,&quot;ru&quot;:&quot;отзывов&quot;}'>rəy</span></span></div>
+  <div class="cta">
+    <a class="btn primary" href="tel:0502500599">📞 <span data-i18n='{&quot;az&quot;:&quot;Zəng et&quot;,&quot;en&quot;:&quot;Call&quot;,&quot;ru&quot;:&quot;Позвонить&quot;}'>Zəng et</span></a>
+    <a class="btn ghost" href="https://www.google.com/maps?cid=16653742969941550049" target="_blank" rel="noopener">📍 <span data-i18n='{&quot;az&quot;:&quot;Yol tarifi&quot;,&quot;en&quot;:&quot;Directions&quot;,&quot;ru&quot;:&quot;Маршрут&quot;}'>Yol tarifi</span></a>
+  </div>
+</div></section>
+
+<section id="about" class="sec about"><div class="wrap">
+  <h2><span data-i18n='{&quot;az&quot;:&quot;Haqqımızda&quot;,&quot;en&quot;:&quot;About us&quot;,&quot;ru&quot;:&quot;О нас&quot;}'>Haqqımızda</span></h2>
+  <p>Shakespeare Coffee &amp; Bistro — 11 Aziz Aliyev St, Baku 1000. 526 müştəri rəyi ilə 4.5★ qiymətləndirilib.</p>
+</div></section>
+
+<section id="menu" class="sec"><div class="wrap"><h2><span data-i18n='{&quot;az&quot;:&quot;Xidmətlər və imkanlar&quot;,&quot;en&quot;:&quot;Services &amp; features&quot;,&quot;ru&quot;:&quot;Услуги и возможности&quot;}'>Xidmətlər və imkanlar</span></h2>
+        <ul class="feats"><li>Açıq havada oturacaq</li><li>Özünlə apar</li><li>Məkanda yemək</li><li>Geniş pivə seçimi</li><li>Əla qəhvə</li><li>Əla desertlər</li><li>Geniş çay seçimi</li><li>Canlı çıxışlar</li><li>Nahar</li><li>Şam yeməyi</li><li>Tək yemək üçün</li><li>Pivə</li></ul>
+        <div class="chips"><span class="chip">Coffee shop</span></div>
+      </div></section>
+
+
+<section id="hours" class="sec alt"><div class="wrap narrow"><h2><span data-i18n='{&quot;az&quot;:&quot;İş saatları&quot;,&quot;en&quot;:&quot;Opening hours&quot;,&quot;ru&quot;:&quot;Часы работы&quot;}'>İş saatları</span></h2>
+        <table class="hours"><tr><th>Şənbə</th><td>9 AM–11 PM</td></tr><tr><th>Bazar</th><td>9 AM–11 PM</td></tr><tr><th>Bazar ertəsi</th><td>9 AM–11 PM</td></tr><tr><th>Çərşənbə axşamı</th><td>9 AM–11 PM</td></tr><tr><th>Çərşənbə</th><td>9 AM–11 PM</td></tr><tr><th>Cümə axşamı</th><td>9 AM–11 PM</td></tr><tr><th>Cümə</th><td>9 AM–11 PM</td></tr></table>
+      </div></section>
+
+<section id="contact" class="sec"><div class="wrap">
+  <h2><span data-i18n='{&quot;az&quot;:&quot;Əlaqə&quot;,&quot;en&quot;:&quot;Contact&quot;,&quot;ru&quot;:&quot;Контакты&quot;}'>Əlaqə</span></h2>
+  <div class="contact-grid">
+    <div class="cinfo">
+      <div class="row"><div class="ico">📍</div><div><strong><span data-i18n='{&quot;az&quot;:&quot;Ünvan&quot;,&quot;en&quot;:&quot;Address&quot;,&quot;ru&quot;:&quot;Адрес&quot;}'>Ünvan</span></strong><br>11 Aziz Aliyev St, Baku 1000</div></div>
+      <div class="row"><div class="ico">📞</div><div><strong><span data-i18n='{&quot;az&quot;:&quot;Telefon&quot;,&quot;en&quot;:&quot;Phone&quot;,&quot;ru&quot;:&quot;Телефон&quot;}'>Telefon</span></strong><br><a href="tel:0502500599">050 250 05 99</a></div></div>
+    </div>
+    <a class="mapcard" href="https://www.google.com/maps?cid=16653742969941550049" target="_blank" rel="noopener"><div>🗺️<br><strong><span data-i18n='{&quot;az&quot;:&quot;Yol tarifi&quot;,&quot;en&quot;:&quot;Directions&quot;,&quot;ru&quot;:&quot;Маршрут&quot;}'>Yol tarifi</span></strong></div></a>
+  </div>
+</div></section>
+
+<footer>
+  <div>© 2026 Shakespeare Coffee &amp; Bistro</div>
+  <div class="demo"><span data-i18n='{&quot;az&quot;:&quot;Bu sayt nümunə olaraq hazırlanmışdır.&quot;,&quot;en&quot;:&quot;This website was created as a demo.&quot;,&quot;ru&quot;:&quot;Этот сайт создан в качестве примера.&quot;}'>Bu sayt nümunə olaraq hazırlanmışdır.</span> · <a href="#">Veb Studiya</a></div>
+</footer>
+
+<script>
+const I18N={&quot;az&quot;:{&quot;nav_about&quot;:&quot;Haqqımızda&quot;,&quot;nav_menu&quot;:&quot;Xidmətlər&quot;,&quot;nav_gallery&quot;:&quot;Qalereya&quot;,&quot;nav_reviews&quot;:&quot;Rəylər&quot;,&quot;nav_hours&quot;:&quot;İş saatları&quot;,&quot;nav_contact&quot;:&quot;Əlaqə&quot;,&quot;cta_call&quot;:&quot;Zəng et&quot;,&quot;cta_directions&quot;:&quot;Yol tarifi&quot;,&quot;hero_reviews&quot;:&quot;rəy&quot;,&quot;based_on&quot;:&quot;əsasında&quot;,&quot;about_t&quot;:&quot;Haqqımızda&quot;,&quot;menu_t&quot;:&quot;Xidmətlər və imkanlar&quot;,&quot;gallery_t&quot;:&quot;Qalereya&quot;,&quot;reviews_t&quot;:&quot;Müştəri rəyləri&quot;,&quot;hours_t&quot;:&quot;İş saatları&quot;,&quot;contact_t&quot;:&quot;Əlaqə&quot;,&quot;address&quot;:&quot;Ünvan&quot;,&quot;phone&quot;:&quot;Telefon&quot;,&quot;open_now&quot;:&quot;Açıqdır&quot;,&quot;closed_now&quot;:&quot;Bağlıdır&quot;,&quot;contact_lead&quot;:&quot;Bizimlə əlaqə saxlayın və ya birbaşa gəlin — sizi gözləyirik.&quot;,&quot;demo_note&quot;:&quot;Bu sayt nümunə olaraq hazırlanmışdır.&quot;},&quot;ru&quot;:{&quot;nav_about&quot;:&quot;О нас&quot;,&quot;nav_menu&quot;:&quot;Услуги&quot;,&quot;nav_gallery&quot;:&quot;Галерея&quot;,&quot;nav_reviews&quot;:&quot;Отзывы&quot;,&quot;nav_hours&quot;:&quot;Часы работы&quot;,&quot;nav_contact&quot;:&quot;Контакты&quot;,&quot;cta_call&quot;:&quot;Позвонить&quot;,&quot;cta_directions&quot;:&quot;Маршрут&quot;,&quot;hero_reviews&quot;:&quot;отзывов&quot;,&quot;based_on&quot;:&quot;на основе&quot;,&quot;about_t&quot;:&quot;О нас&quot;,&quot;menu_t&quot;:&quot;Услуги и возможности&quot;,&quot;gallery_t&quot;:&quot;Галерея&quot;,&quot;reviews_t&quot;:&quot;Отзывы клиентов&quot;,&quot;hours_t&quot;:&quot;Часы работы&quot;,&quot;contact_t&quot;:&quot;Контакты&quot;,&quot;address&quot;:&quot;Адрес&quot;,&quot;phone&quot;:&quot;Телефон&quot;,&quot;open_now&quot;:&quot;Открыто&quot;,&quot;closed_now&quot;:&quot;Закрыто&quot;,&quot;contact_lead&quot;:&quot;Свяжитесь с нами или приходите напрямую — мы вас ждём.&quot;,&quot;demo_note&quot;:&quot;Этот сайт создан в качестве примера.&quot;},&quot;en&quot;:{&quot;nav_about&quot;:&quot;About&quot;,&quot;nav_menu&quot;:&quot;Services&quot;,&quot;nav_gallery&quot;:&quot;Gallery&quot;,&quot;nav_reviews&quot;:&quot;Reviews&quot;,&quot;nav_hours&quot;:&quot;Hours&quot;,&quot;nav_contact&quot;:&quot;Contact&quot;,&quot;cta_call&quot;:&quot;Call&quot;,&quot;cta_directions&quot;:&quot;Directions&quot;,&quot;hero_reviews&quot;:&quot;reviews&quot;,&quot;based_on&quot;:&quot;based on&quot;,&quot;about_t&quot;:&quot;About us&quot;,&quot;menu_t&quot;:&quot;Services &amp; features&quot;,&quot;gallery_t&quot;:&quot;Gallery&quot;,&quot;reviews_t&quot;:&quot;Customer reviews&quot;,&quot;hours_t&quot;:&quot;Opening hours&quot;,&quot;contact_t&quot;:&quot;Contact&quot;,&quot;address&quot;:&quot;Address&quot;,&quot;phone&quot;:&quot;Phone&quot;,&quot;open_now&quot;:&quot;Open&quot;,&quot;closed_now&quot;:&quot;Closed&quot;,&quot;contact_lead&quot;:&quot;Get in touch or just drop by — we look forward to seeing you.&quot;,&quot;demo_note&quot;:&quot;This website was created as a demo.&quot;}};
+document.querySelector('.burger')?.addEventListener('click',()=>document.querySelector('.menu').classList.toggle('open'));
+document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.menu').classList.remove('open')));
+document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',()=>{
+  const lang=btn.dataset.lang;
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b===btn));
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{try{const d=JSON.parse(el.getAttribute('data-i18n'));if(d[lang])el.textContent=d[lang];}catch(e){}});
+}));
+document.querySelectorAll('.gimg').forEach(g=>g.addEventListener('click',()=>{
+  const o=document.createElement('div');o.style.cssText='position:fixed;inset:0;background:#000d;z-index:99;display:grid;place-items:center;cursor:zoom-out;padding:20px';
+  o.innerHTML='<img src="'+g.dataset.full+'" style="max-width:96%;max-height:92%;border-radius:12px">';
+  o.addEventListener('click',()=>o.remove());document.body.appendChild(o);
+}));
+</script>
+</body>
+</html>
