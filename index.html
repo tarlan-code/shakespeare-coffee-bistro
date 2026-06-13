@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang-az="Shakespeare Coffee & Bistro" data-lang-en="Shakespeare Coffee & Bistro" data-lang-ru="Shakespeare Coffee & Bistro">Shakespeare Coffee & Bistro</title>
+    <title>Shakespeare Coffee & Bistro – Baku</title>
+    <meta name="description" content="Baku şəhərinin mərkəzində əla qəhvə, ləzzətli desertlər və canlı musiqi məkanı.">
     <meta name="robots" content="noindex, nofollow">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
     <style>
-        /* CSS Reset & Base Styles */
         :root {
-            --primary-color: #8B4513; /* SaddleBrown - warm, coffee-like */
-            --secondary-color: #A0522D; /* Sienna */
-            --accent-color: #D2B48C; /* Tan - lighter accent */
-            --text-color: #333;
-            --light-text-color: #f8f8f8;
-            --background-light: #FDF5E6; /* OldLace */
-            --background-dark: #2C1A0D; /* Darker brown for contrast */
-            --shadow-color: rgba(0, 0, 0, 0.1);
-            --border-radius: 8px;
-            --max-width: 1200px;
+            --bg: #f5f4ee;
+            --text: #111111;
+            --surface: #ffffff;
+            --primary: #ff5a3c;
+            --secondary: #2b6cff;
+            --border: 3px solid var(--text);
+            --shadow: 8px 8px 0px var(--text);
+            --shadow-sm: 4px 4px 0px var(--text);
+            --radius: 8px;
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Space Grotesk', sans-serif;
+            --transition: 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
-        * {
+        *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -30,829 +34,503 @@
 
         html {
             scroll-behavior: smooth;
+            font-size: 16px;
         }
 
         body {
-            font-family: 'Lato', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-light);
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-            color: var(--primary-color);
-            margin-bottom: 0.8em;
-            line-height: 1.2;
-        }
-
-        h1 { font-size: 2.8em; }
-        h2 { font-size: 2.2em; }
-        h3 { font-size: 1.8em; }
-
-        a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--primary-color);
-        }
-
-        p {
-            margin-bottom: 1em;
-        }
-
-        ul {
-            list-style: none;
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
         }
 
         .container {
-            max-width: var(--max-width);
+            width: 100%;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 24px;
         }
 
-        section {
-            padding: 4rem 0;
-            position: relative;
-            overflow: hidden;
+        .section {
+            padding: 80px 0;
         }
 
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--light-text-color);
-            padding: 0.8em 1.5em;
-            border-radius: 50px;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 0.05em;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .btn:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-
-        .btn.btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--light-text-color);
-            color: var(--light-text-color);
-        }
-
-        .btn.btn-outline:hover {
-            background-color: var(--light-text-color);
-            color: var(--primary-color);
-        }
-
-        /* Header */
+        /* Header & Navigation */
         .site-header {
-            background-color: var(--background-dark);
-            color: var(--light-text-color);
-            padding: 1rem 0;
-            position: sticky;
+            position: absolute;
             top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px var(--shadow-color);
+            left: 0;
+            width: 100%;
+            padding: 24px 0;
+            z-index: 100;
         }
 
-        .site-header .container {
+        .header-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.8em;
+            font-family: var(--font-display);
             font-weight: 700;
-            color: var(--accent-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 1.5rem;
+            color: var(--text);
+            text-decoration: none;
+            transition: transform var(--transition);
+        }
+        .logo:hover {
+            transform: scale(1.05);
         }
 
-        .site-nav ul {
+        .header-controls {
             display: flex;
-            gap: 2rem;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .lang-toggle button {
+            background: none;
+            border: none;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 4px 8px;
+            color: var(--text);
+            opacity: 0.6;
+            transition: all var(--transition);
+            position: relative;
+        }
+        .lang-toggle button.active {
+            opacity: 1;
+            color: var(--primary);
+        }
+        .lang-toggle button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 8px;
+            right: 8px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .nav-burger {
+            display: none;
+            font-size: 2rem;
+            line-height: 1;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        .site-nav {
+            display: flex;
+            gap: 32px;
         }
 
         .site-nav a {
-            color: var(--light-text-color);
-            font-weight: 600;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
             position: relative;
-            padding-bottom: 5px;
+            padding: 4px 0;
         }
-
         .site-nav a::after {
             content: '';
             position: absolute;
-            left: 0;
             bottom: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent-color);
-            transition: width 0.3s ease;
-        }
-
-        .site-nav a:hover::after {
+            left: 0;
             width: 100%;
+            height: 2px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease-out;
         }
-
-        /* Language Toggle */
-        .lang-toggle {
-            display: flex;
-            gap: 0.5rem;
-            margin-left: 1rem;
-        }
-        .lang-toggle button {
-            background: none;
-            border: 1px solid var(--accent-color);
-            color: var(--light-text-color);
-            padding: 0.3em 0.6em;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.85em;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        .lang-toggle button.active,
-        .lang-toggle button:hover {
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-        }
-
-
-        /* Mobile Nav Burger */
-        .nav-burger {
-            display: none; /* Hidden on desktop */
-            background: none;
-            border: none;
-            font-size: 2em;
-            color: var(--light-text-color);
-            cursor: pointer;
-            z-index: 1001; /* Ensure it's above other elements */
+        .site-nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.6)), url("https://lh3.googleusercontent.com/gps-cs-s/APNQkAGDNifmnkpK1kX1AMYRqmnlqen7sJEe3HK1fgfvtxBc1YTu4a96x-RPUgT49bqvC2oRM5Irsrjv8IOUj7hwBdbCdbwVSrxvg-0q77gIQl3emArRN3LeP_xpS0ujkjtrUuvqSYjj=w1600-h900-k-no") no-repeat center center/cover;
-            color: var(--light-text-color);
-            text-align: center;
-            padding: 10rem 0;
+            position: relative;
+            min-height: 100vh;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            min-height: 80vh;
+            padding: 120px 0;
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAGDNifmnkpK1kX1AMYRqmnlqen7sJEe3HK1fgfvtxBc1YTu4a96x-RPUgT49bqvC2oRM5Irsrjv8IOUj7hwBdbCdbwVSrxvg-0q77gIQl3emArRN3LeP_xpS0ujkjtrUuvqSYjj=w1600-h900-k-no');
+            background-size: cover;
+            background-position: center;
+            color: var(--surface);
         }
-
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.1);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
         .hero h1 {
-            color: var(--accent-color);
-            font-size: 4em;
-            margin-bottom: 0.2em;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            font-size: clamp(3rem, 12vw, 9rem);
+            text-shadow: 0 0 40px rgba(0,0,0,0.4);
+            max-width: 12ch;
+            margin-bottom: 32px;
         }
-
-        .hero p {
-            font-size: 1.5em;
-            margin-bottom: 1.5em;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border: var(--border);
+            transition: all var(--transition);
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--text);
+            box-shadow: var(--shadow-sm);
+        }
+        .btn-primary:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 0 0 0 var(--text);
         }
 
         .rating-badge {
-            background-color: rgba(0,0,0,0.5);
-            color: var(--light-text-color);
-            padding: 0.5em 1em;
-            border-radius: 20px;
-            font-size: 1.1em;
-            margin-bottom: 1.5em;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5em;
-        }
-
-        .rating-badge .star {
-            color: gold; /* Or a specific yellow */
-        }
-
-        .hero .buttons {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        /* About Section */
-        .about {
-            background-color: var(--background-light);
+            position: absolute;
+            top: 120px;
+            right: 24px;
+            background: var(--surface);
+            color: var(--text);
+            padding: 16px 24px;
+            border: var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
             text-align: center;
+            transform: rotate(5deg);
+            z-index: 10;
+        }
+        .rating-badge .stars {
+            font-size: 2rem;
+            color: var(--primary);
+            line-height: 1;
+        }
+        .rating-badge .reviews {
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 8px;
+            white-space: nowrap;
         }
 
-        .about h2 {
-            margin-bottom: 1.5rem;
-        }
-
-        /* Features/Services Section */
-        .features {
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-            text-align: center;
-        }
-
-        .features h2 {
-            color: var(--background-dark);
-            margin-bottom: 2rem;
-        }
-
+        /* Features Section */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+        .feature-card {
+            background-color: var(--surface);
+            border: var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: var(--shadow);
+            transition: all var(--transition);
+        }
+        .feature-card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 12px 12px 0px var(--text);
+        }
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            color: var(--primary);
         }
 
-        .feature-item {
-            background-color: var(--light-text-color);
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: 0 4px 15px var(--shadow-color);
-            text-align: left;
+        /* Location & Hours Section */
+        .location-hours-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+        .location-card, .hours-card {
+            background: var(--surface);
+            border: var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 32px;
+        }
+        .section-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 48px;
+            position: relative;
+        }
+        .section-title::before {
+            content: '///';
+            font-size: 0.3em;
+            color: var(--secondary);
+            position: absolute;
+            top: -0.5em;
+            left: 0;
+            font-family: var(--font-body);
+        }
+
+        .location-card .address {
+            font-size: 1.25rem;
+            margin-bottom: 24px;
+        }
+        .location-actions {
             display: flex;
-            align-items: center;
-            gap: 1rem;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--surface);
+            box-shadow: var(--shadow-sm);
+        }
+        .btn-secondary:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 0 0 0 var(--text);
         }
 
-        .feature-item svg {
-            color: var(--secondary-color);
-            font-size: 1.8em;
-            flex-shrink: 0;
-            width: 24px; /* Ensure SVG size is consistent */
-            height: 24px;
+        .hours-list {
+            list-style: none;
+            font-family: var(--font-body);
         }
-
-        .feature-item h3 {
-            color: var(--primary-color);
-            margin-bottom: 0; /* No margin bottom for h3 in feature-item */
-            font-size: 1.2em;
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 2px dotted rgba(17,17,17,0.2);
         }
-
-        /* Opening Hours */
-        .opening-hours {
-            background-color: var(--background-light);
-            text-align: center;
-        }
-
-        .opening-hours h2 {
-            margin-bottom: 2rem;
-        }
-
-        .hours-table {
-            width: 100%;
-            max-width: 500px;
-            margin: 0 auto;
-            border-collapse: collapse;
-            background-color: var(--light-text-color);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: 0 4px 15px var(--shadow-color);
-        }
-
-        .hours-table th, .hours-table td {
-            padding: 1em 1.5em;
-            border-bottom: 1px solid #eee;
-            text-align: left;
-        }
-
-        .hours-table th {
-            background-color: var(--secondary-color);
-            color: var(--light-text-color);
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .hours-table tr:last-child td {
+        .hours-list li:last-child {
             border-bottom: none;
         }
-
-        .hours-table tr:nth-child(even) {
-            background-color: #f9f9f9;
+        .hours-list span {
+            font-weight: 500;
         }
-
-        /* Contact Section */
-        .contact {
-            background-color: var(--background-dark);
-            color: var(--light-text-color);
-            text-align: center;
-        }
-
-        .contact h2 {
-            color: var(--accent-color);
-            margin-bottom: 2rem;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            margin-top: 2rem;
-            align-items: center;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-size: 1.1em;
-        }
-
-        .contact-item svg {
-            color: var(--accent-color);
-            font-size: 1.5em;
-            width: 24px; /* Ensure SVG size is consistent */
-            height: 24px;
-        }
-
-        .contact-item a {
-            color: var(--light-text-color);
-        }
-
-        .contact-item a:hover {
-            color: var(--accent-color);
-        }
-
-        .directions-card {
-            background-color: var(--secondary-color);
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            margin-top: 2rem;
-            display: inline-block; /* To center it with text-align: center on parent */
-            text-align: left; /* Reset text alignment for content inside */
-        }
-
-        .directions-card p {
-            margin-bottom: 1rem;
-            font-size: 1.1em;
-            color: var(--light-text-color);
-        }
-
-        .directions-card .btn {
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-        }
-
-        .directions-card .btn:hover {
-            background-color: var(--light-text-color);
-            color: var(--secondary-color);
-        }
-
 
         /* Footer */
         .site-footer {
-            background-color: var(--background-dark);
-            color: var(--accent-color);
-            padding: 2rem 0;
+            background: var(--text);
+            color: var(--bg);
+            padding: 40px 0;
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.9em;
         }
-
-        .site-footer a {
-            color: var(--accent-color);
-            margin: 0 0.5rem;
+        .footer-credits {
+            font-size: 1rem;
         }
-
-        .site-footer a:hover {
-            color: var(--light-text-color);
+        .footer-credits a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            position: relative;
         }
-
+        .footer-credits a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: var(--primary);
+            bottom: -2px;
+            left: 0;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+            transform: scaleX(0);
+        }
+        .footer-credits a:hover::after {
+            transform-origin: bottom left;
+            transform: scaleX(1);
+        }
         .footer-note {
-            margin-top: 1rem;
-            font-style: italic;
-            color: rgba(255,255,255,0.7);
+            margin-top: 16px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
 
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            h1 { font-size: 3em; }
-            h2 { font-size: 1.8em; }
-            h3 { font-size: 1.5em; }
-
-            .site-header .container {
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
-
-            .logo {
-                margin-bottom: 0;
-            }
-
-            .lang-toggle {
-                order: 1; /* Place it before burger */
-                margin-left: 0;
-                margin-right: 1rem;
-            }
-
-            .nav-burger {
-                display: block; /* Show burger on mobile */
-                order: 2; /* Place it after lang-toggle */
-            }
-
-            .site-nav {
-                display: none; /* Hide nav by default */
-                flex-direction: column;
-                width: 100%;
-                background-color: var(--background-dark);
-                position: absolute;
-                top: 100%; /* Below the header */
-                left: 0;
-                padding: 1rem 0;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-                transform: translateY(-100%); /* Start off-screen */
-                opacity: 0;
-                transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-            }
-
-            body.nav-open .site-nav { /* Corrected from .body.nav-open to body.nav-open */
-                display: flex; /* Show nav when body has nav-open class */
-                transform: translateY(0);
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal.is-visible {
                 opacity: 1;
+                transform: translateY(0);
             }
-
-            .site-nav ul {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
             }
-
-            .site-nav a {
-                padding: 0.8rem 0;
-                display: block;
-            }
-
-            .site-nav a::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            .hero {
-                padding: 8rem 0;
-                min-height: 70vh;
-            }
-
-            .hero h1 {
-                font-size: 2.8em;
-            }
-
-            .hero p {
-                font-size: 1.2em;
-            }
-
-            .hero .buttons {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .feature-item {
-                flex-direction: column;
-                text-align: center;
-            }
-            .feature-item svg {
-                margin-bottom: 0.5rem;
-            }
-
-            .contact-info {
-                align-items: flex-start; /* Align items to left in column layout */
-                padding-left: 1.5rem; /* Indent a bit for readability */
-                text-align: left;
+             .reveal {
+                opacity: 1;
+                transform: none;
             }
         }
 
-        @media (max-width: 480px) {
-            h1 { font-size: 2.5em; }
-            h2 { font-size: 1.6em; }
-            .hero {
-                padding: 6rem 0;
-            }
-            .hero h1 {
-                font-size: 2.2em;
-            }
-            .hero p {
-                font-size: 1em;
+        /* Responsive */
+        @media (max-width: 992px) {
+            .location-hours-wrapper {
+                grid-template-columns: 1fr;
+                gap: 32px;
             }
             .rating-badge {
-                font-size: 0.9em;
-            }
-            .btn {
-                padding: 0.7em 1.2em;
-                font-size: 0.9rem;
-            }
-            section {
-                padding: 3rem 0;
+                position: relative;
+                top: auto;
+                right: auto;
+                transform: rotate(0);
+                margin-top: 40px;
+                display: inline-block;
             }
         }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 60px 0;
+            }
+            .site-header {
+                padding: 16px 0;
+            }
+            .nav-burger {
+                display: block;
+            }
+            .site-nav {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: var(--bg);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+            }
+            body.nav-open .site-nav {
+                display: flex;
+            }
+            .site-nav a {
+                font-size: 2rem;
+            }
+            body.nav-open {
+                overflow: hidden;
+            }
+            .logo {
+                font-size: 1.25rem;
+            }
+            .header-controls {
+                gap: 16px;
+            }
+        }
+
     </style>
 </head>
 <body>
-    <!-- Language Data -->
-    <script>
-        const translations = {
-            'az': {
-                'nav-home': 'Ana Səhifə',
-                'nav-about': 'Haqqımızda',
-                'nav-features': 'Xidmətlər',
-                'nav-hours': 'İş Saatları',
-                'nav-contact': 'Əlaqə',
-                'hero-category': 'Kofe Dükanı',
-                'hero-call': 'Zəng et',
-                'hero-directions': 'Yol tarifi',
-                'about-title': 'Haqqımızda',
-                'about-text': 'Shakespeare Coffee & Bistro Bakının mərkəzində yerləşən, rahat və ilhamverici bir məkandır. Biz sizə əla qəhvə, ləzzətli desertlər və geniş çay seçimi təklif edirik. Canlı musiqi çıxışları ilə hər gününüzü daha da gözəl edirik. Səhər yeməyi, nahar və şam yeməyi üçün idealdır, həm tək, həm də dostlarınızla vaxt keçirmək üçün mükəmməldir.',
-                'features-title': 'Xidmətlərimiz və İmkanlarımız',
-                'feature-outdoor': 'Açıq havada oturacaq',
-                'feature-takeaway': 'Özünlə apar',
-                'feature-dinein': 'Məkanda yemək',
-                'feature-beer': 'Geniş pivə seçimi',
-                'feature-coffee': 'Əla qəhvə',
-                'feature-desserts': 'Əla desertlər',
-                'feature-tea': 'Geniş çay seçimi',
-                'feature-live': 'Canlı çıxışlar',
-                'feature-lunch': 'Nahar',
-                'feature-dinner': 'Şam yeməyi',
-                'feature-solo': 'Tək yemək üçün',
-                'feature-beer-only': 'Pivə',
-                'hours-title': 'İş Saatları',
-                'hours-day': 'Gün',
-                'hours-time': 'Saatlar',
-                'contact-title': 'Əlaqə',
-                'contact-address-label': 'Ünvan',
-                'contact-phone-label': 'Telefon',
-                'contact-get-directions': 'Bizi xəritədə tapın və yol tarifi alın!',
-                'get-directions-button': 'Yol tarifi al',
-                'footer-note': 'Bu sayt nümunə olaraq hazırlanmışdır.'
-            },
-            'en': {
-                'nav-home': 'Home',
-                'nav-about': 'About Us',
-                'nav-features': 'Features',
-                'nav-hours': 'Opening Hours',
-                'nav-contact': 'Contact',
-                'hero-category': 'Coffee Shop',
-                'hero-call': 'Call Us',
-                'hero-directions': 'Get Directions',
-                'about-title': 'About Us',
-                'about-text': 'Shakespeare Coffee & Bistro is a cozy and inspiring place located in the heart of Baku. We offer excellent coffee, delicious desserts, and a wide selection of teas. We make your every day even better with live music performances. Perfect for breakfast, lunch, and dinner, it\'s an ideal spot for both solo visits and spending time with friends.',
-                'features-title': 'Our Services & Amenities',
-                'feature-outdoor': 'Outdoor Seating',
-                'feature-takeaway': 'Takeaway',
-                'feature-dinein': 'Dine-in',
-                'feature-beer': 'Wide Beer Selection',
-                'feature-coffee': 'Excellent Coffee',
-                'feature-desserts': 'Excellent Desserts',
-                'feature-tea': 'Wide Tea Selection',
-                'feature-live': 'Live Performances',
-                'feature-lunch': 'Lunch',
-                'feature-dinner': 'Dinner',
-                'feature-solo': 'Good for solo dining',
-                'feature-beer-only': 'Beer',
-                'hours-title': 'Opening Hours',
-                'hours-day': 'Day',
-                'hours-time': 'Hours',
-                'contact-title': 'Contact Us',
-                'contact-address-label': 'Address',
-                'contact-phone-label': 'Phone',
-                'contact-get-directions': 'Find us on the map and get directions!',
-                'get-directions-button': 'Get Directions',
-                'footer-note': 'This site was prepared as a demo.'
-            },
-            'ru': {
-                'nav-home': 'Главная',
-                'nav-about': 'О нас',
-                'nav-features': 'Услуги',
-                'nav-hours': 'Часы работы',
-                'nav-contact': 'Контакты',
-                'hero-category': 'Кофейня',
-                'hero-call': 'Позвонить',
-                'hero-directions': 'Проложить маршрут',
-                'about-title': 'О нас',
-                'about-text': 'Shakespeare Coffee & Bistro — это уютное и вдохновляющее место, расположенное в самом сердце Баку. Мы предлагаем отличный кофе, вкусные десерты и широкий выбор чая. Мы делаем каждый ваш день еще лучше благодаря живым музыкальным выступлениям. Идеально подходит для завтрака, обеда и ужина, это прекрасное место как для одиночных визитов, так и для проведения времени с друзьями.',
-                'features-title': 'Наши услуги и удобства',
-                'feature-outdoor': 'Сидения на открытом воздухе',
-                'feature-takeaway': 'На вынос',
-                'feature-dinein': 'Еда на месте',
-                'feature-beer': 'Широкий выбор пива',
-                'feature-coffee': 'Отличный кофе',
-                'feature-desserts': 'Отличные десерты',
-                'feature-tea': 'Широкий выбор чая',
-                'feature-live': 'Живые выступления',
-                'feature-lunch': 'Обед',
-                'feature-dinner': 'Ужин',
-                'feature-solo': 'Подходит для ужина в одиночку',
-                'feature-beer-only': 'Пиво',
-                'hours-title': 'Часы работы',
-                'hours-day': 'День',
-                'hours-time': 'Часы',
-                'contact-title': 'Свяжитесь с нами',
-                'contact-address-label': 'Адрес',
-                'contact-phone-label': 'Телефон',
-                'contact-get-directions': 'Найдите нас на карте и проложите маршрут!',
-                'get-directions-button': 'Проложить маршрут',
-                'footer-note': 'Этот сайт был подготовлен как демонстрация.'
-            }
-        };
-
-        function setLanguage(lang) {
-            document.documentElement.lang = lang; // Set HTML lang attribute
-            localStorage.setItem('selectedLang', lang); // Save preference
-
-            // Update title
-            const titleElement = document.querySelector('title');
-            if (titleElement) {
-                const translatedTitle = titleElement.getAttribute(`data-lang-${lang}`);
-                if (translatedTitle) {
-                    document.title = translatedTitle;
-                }
-            }
-
-            // Update elements with data-lang-key
-            document.querySelectorAll('[data-lang-key]').forEach(element => {
-                const key = element.getAttribute('data-lang-key');
-                if (translations[lang] && translations[lang][key]) {
-                    element.textContent = translations[lang][key];
-                }
-            });
-            
-            // Update the button for directions card specifically
-            const directionsCardButton = document.getElementById('directions-card-btn');
-            if (directionsCardButton && translations[lang] && translations[lang]['get-directions-button']) {
-                directionsCardButton.textContent = translations[lang]['get-directions-button'];
-            }
-
-
-            // Update active state of language buttons
-            document.querySelectorAll('.lang-toggle button').forEach(button => {
-                if (button.dataset.lang === lang) {
-                    button.classList.add('active');
-                } else {
-                    button.classList.remove('active');
-                }
-            });
-        }
-
-        // Initialize language on load
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('selectedLang') || 'az';
-            setLanguage(savedLang);
-        });
-    </script>
 
     <header class="site-header">
         <div class="container">
-            <a href="#hero" class="logo">Shakespeare</a>
-            <div class="lang-toggle">
-                <button data-lang="az" onclick="setLanguage('az')">AZ</button>
-                <button data-lang="en" onclick="setLanguage('en')">EN</button>
-                <button data-lang="ru" onclick="setLanguage('ru')">RU</button>
+            <div class="header-inner">
+                <a href="#" class="logo">Shakespeare</a>
+                <div class="header-controls">
+                    <div class="lang-toggle">
+                        <button onclick="changeLanguage('az')" class="active">AZ</button>
+                        <button onclick="changeLanguage('ru')">RU</button>
+                        <button onclick="changeLanguage('en')">EN</button>
+                    </div>
+                    <nav class="site-nav">
+                        <a href="#features" onclick="document.body.classList.remove('nav-open')" data-lang-az="Xüsusiyyətlər" data-lang-ru="Особенности" data-lang-en="Features">Xüsusiyyətlər</a>
+                        <a href="#location" onclick="document.body.classList.remove('nav-open')" data-lang-az="Məkan" data-lang-ru="Локация" data-lang-en="Location">Məkan</a>
+                        <a href="#hours" onclick="document.body.classList.remove('nav-open')" data-lang-az="İş saatları" data-lang-ru="Часы работы" data-lang-en="Hours">İş saatları</a>
+                    </nav>
+                    <button class="nav-burger" aria-label="menu" onclick="document.body.classList.toggle('nav-open')">☰</button>
+                </div>
             </div>
-            <button class="nav-burger" aria-label="menu" onclick="document.body.classList.toggle('nav-open')">☰</button>
-            <nav class="site-nav">
-                <ul>
-                    <li><a href="#hero" data-lang-key="nav-home" onclick="document.body.classList.remove('nav-open')">Ana Səhifə</a></li>
-                    <li><a href="#about" data-lang-key="nav-about" onclick="document.body.classList.remove('nav-open')">Haqqımızda</a></li>
-                    <li><a href="#features" data-lang-key="nav-features" onclick="document.body.classList.remove('nav-open')">Xidmətlər</a></li>
-                    <li><a href="#hours" data-lang-key="nav-hours" onclick="document.body.classList.remove('nav-open')">İş Saatları</a></li>
-                    <li><a href="#contact" data-lang-key="nav-contact" onclick="document.body.classList.remove('nav-open')">Əlaqə</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
     <main>
-        <section id="hero" class="hero">
+        <section class="hero">
             <div class="container">
-                <h1>Shakespeare Coffee & Bistro</h1>
-                <p data-lang-key="hero-category">Kofe Dükanı</p>
-                <div class="rating-badge">
-                    <span class="star">⭐</span> 4.5 (526 Google reviews)
-                </div>
-                <div class="buttons">
-                    <a href="tel:0502500599" class="btn" data-lang-key="hero-call">Zəng et</a>
-                    <a href="https://www.google.com/maps?cid=16653742969941550049" target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-lang-key="hero-directions">Yol tarifi</a>
+                <div class="hero-content">
+                    <h1>Shakespeare Coffee & Bistro</h1>
+                    <a href="#features" class="btn btn-primary" data-lang-az="Atmosferi hiss et" data-lang-ru="Почувствуй атмосферу" data-lang-en="Feel the vibe">Atmosferi hiss et</a>
+                    <div class="rating-badge">
+                        <div class="stars">4.5 ★</div>
+                        <div class="reviews">526 Google rəyi</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about">
+        <section id="features" class="section">
             <div class="container">
-                <h2 data-lang-key="about-title">Haqqımızda</h2>
-                <p data-lang-key="about-text">Shakespeare Coffee & Bistro Bakının mərkəzində yerləşən, rahat və ilhamverici bir məkandır. Biz sizə əla qəhvə, ləzzətli desertlər və geniş çay seçimi təklif edirik. Canlı musiqi çıxışları ilə hər gününüzü daha da gözəl edirik. Səhər yeməyi, nahar və şam yeməyi üçün idealdır, həm tək, həm də dostlarınızla vaxt keçirmək üçün mükəmməldir.</p>
-            </div>
-        </section>
-
-        <section id="features" class="features">
-            <div class="container">
-                <h2 data-lang-key="features-title">Xidmətlərimiz və İmkanlarımız</h2>
+                <h2 class="section-title reveal" data-lang-az="Nə təklif edirik?" data-lang-ru="Что мы предлагаем?" data-lang-en="What we offer?">Nə təklif edirik?</h2>
                 <div class="features-grid">
-                    <div class="feature-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                        <h3 data-lang-key="feature-outdoor">Açıq havada oturacaq</h3>
-                    </div>
-                    <div class="feature-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                        <h3 data-lang-key="feature-takeaway">Özünlə apar</h3>
-                    </div>
-                    <div class="feature-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-coffee"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
-                        <h3 data-lang-key="feature-dinein">Məkanda yemək</h3>
-                    </div>
-                    <div class="feature-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-beer"><path d="M18 20V10a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v10"></path><path d="M6 20v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2"></path><path d="M12 8V4"></path><path d="M16 4h-8a2 2 0 0 0-2 2v2"></path></svg>
-                        <h3 data-lang-key="feature-beer">Geniş pivə seçimi</h3>
-                    </div>
-                    <div class="feature-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-coffee"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
-                        <h3 data-lang-key="feature-coffee">Əla qəhvə</h3>
-                    </div>
-                    <div class="feature-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cake"><path d="M22 17H2a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2z"></path><path d="M12 7V2"></path><path d="M12 22V17"></path><path d="M7 7V2"></path><path d="M7 22V17"></path><path d="M17 7V2"></path><path d="M17 22V17"></path></svg>
-                        <h3 data-lang-key="feature-desserts">Əla desertlər</h3>
-                    </div>
-                    <div class="feature-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-branch"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
-                        <h3 data-lang-key="feature-tea">Geniş çay seçimi</h3>
-                    </div>
-                    <div class="feature-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mic"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
-                        <h3 data-lang-key="feature-live">Canlı çıxışlar</h3>
-                    </div>
-                    <div class="feature-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                        <h3 data-lang-key="feature-lunch">Nahar</h3>
-                    </div>
-                    <div class="feature-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                        <h3 data-lang-key="feature-dinner">Şam yeməyi</h3>
-                    </div>
-                    <div class="feature-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                        <h3 data-lang-key="feature-solo">Tək yemək üçün</h3>
-                    </div>
-                    <div class="feature-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-beer"><path d="M18 20V10a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v10"></path><path d="M6 20v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2"></path><path d="M12 8V4"></path><path d="M16 4h-8a2 2 0 0 0-2 2v2"></path></svg>
-                        <h3 data-lang-key="feature-beer-only">Pivə</h3>
-                    </div>
+                    <div class="feature-card reveal"><h3>Əla qəhvə</h3><p data-lang-az="Peşəkar baristalarımızın hazırladığı xüsusi qəhvə dənələri." data-lang-ru="Специальные кофейные зерна, приготовленные нашими профессиональными бариста." data-lang-en="Specialty coffee beans prepared by our professional baristas.">Peşəkar baristalarımızın hazırladığı xüsusi qəhvə dənələri.</p></div>
+                    <div class="feature-card reveal"><h3>Geniş çay seçimi</h3><p data-lang-az="Dünyanın dörd bir yanından gətirilmiş zəngin çay kolleksiyası." data-lang-ru="Богатая коллекция чая со всего мира." data-lang-en="A rich collection of teas from all over the world.">Dünyanın dörd bir yanından gətirilmiş zəngin çay kolleksiyası.</p></div>
+                    <div class="feature-card reveal"><h3>Əla desertlər</h3><p data-lang-az="Hər gün təzə hazırlanan, dadına doymayacağınız şirniyyatlar." data-lang-ru="Свежеприготовленные десерты каждый день, которые вам понравятся." data-lang-en="Freshly made desserts every day that you will love.">Hər gün təzə hazırlanan, dadına doymayacağınız şirniyyatlar.</p></div>
+                    <div class="feature-card reveal"><h3>Canlı çıxışlar</h3><p data-lang-az="Axşamlarınızı unudulmaz edəcək canlı musiqi və performanslar." data-lang-ru="Живая музыка и выступления, которые сделают ваши вечера незабываемыми." data-lang-en="Live music and performances that will make your evenings unforgettable.">Axşamlarınızı unudulmaz edəcək canlı musiqi və performanslar.</p></div>
+                    <div class="feature-card reveal"><h3>Açıq havada oturacaq</h3><p data-lang-az="Şəhərin səs-küyündən uzaq, rahat açıq hava terrası." data-lang-ru="Уютная открытая терраса вдали от городского шума." data-lang-en="A cozy outdoor terrace away from the city noise.">Şəhərin səs-küyündən uzaq, rahat açıq hava terrası.</p></div>
+                    <div class="feature-card reveal"><h3>Geniş pivə seçimi</h3><p data-lang-az="Həm yerli, həm də xarici brendlərdən ibarət zəngin pivə menyusu." data-lang-ru="Богатое пивное меню, включающее как местные, так и зарубежные бренды." data-lang-en="A rich beer menu featuring both local and foreign brands.">Həm yerli, həm də xarici brendlərdən ibarət zəngin pivə menyusu.</p></div>
+                    <div class="feature-card reveal"><h3>Nahar & Şam yeməyi</h3><p data-lang-az="Günün hər saatına uyğun ləzzətli təamlar və yeməklər." data-lang-ru="Вкусные блюда на любое время дня." data-lang-en="Delicious meals for any time of the day.">Günün hər saatına uyğun ləzzətli təamlar və yeməklər.</p></div>
+                    <div class="feature-card reveal"><h3>Özünlə apar</h3><p data-lang-az="Sevimli içki və yeməklərinizi bizdən alıb yola davam edin." data-lang-ru="Возьмите с собой любимые напитки и еду." data-lang-en="Take your favorite drinks and food to go.">Sevimli içki və yeməklərinizi bizdən alıb yola davam edin.</p></div>
                 </div>
             </div>
         </section>
 
-        <section id="hours" class="opening-hours">
+        <section id="location" class="section" style="background-color: var(--surface);">
             <div class="container">
-                <h2 data-lang-key="hours-title">İş Saatları</h2>
-                <table class="hours-table">
-                    <thead>
-                        <tr>
-                            <th data-lang-key="hours-day">Gün</th>
-                            <th data-lang-key="hours-time">Saatlar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Şənbə</td><td>9 AM–11 PM</td></tr>
-                        <tr><td>Bazar</td><td>9 AM–11 PM</td></tr>
-                        <tr><td>Bazar ertəsi</td><td>9 AM–11 PM</td></tr>
-                        <tr><td>Çərşənbə axşamı</td><td>9 AM–11 PM</td></tr>
-                        <tr><td>Çərşənbə</td><td>9 AM–11 PM</td></tr>
-                        <tr><td>Cümə axşamı</td><td>9 AM–11 PM</td></tr>
-                        <tr><td>Cümə</td><td>9 AM–11 PM</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 data-lang-key="contact-title">Əlaqə</h2>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        <span data-lang-key="contact-address-label">Ünvan:</span> 11 Aziz Aliyev St, Baku 1000
+                <div class="location-hours-wrapper">
+                    <div class="location-content reveal">
+                        <h2 class="section-title" data-lang-az="Görüş Yeri" data-lang-ru="Место встречи" data-lang-en="Meeting Point">Görüş Yeri</h2>
+                        <div class="location-card">
+                            <p class="address">11 Aziz Aliyev St, Baku 1000</p>
+                            <div class="location-actions">
+                                <a href="tel:0502500599" class="btn btn-primary" data-lang-az="Zəng et" data-lang-ru="Позвонить" data-lang-en="Call Us">Zəng et</a>
+                                <a href="https://www.google.com/maps?cid=16653742969941550049" target="_blank" rel="noopener" class="btn btn-secondary" data-lang-az="Yol tarifi" data-lang-ru="Маршрут" data-lang-en="Directions">Yol tarifi</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        <span data-lang-key="contact-phone-label">Telefon:</span> <a href="tel:0502500599">050 250 05 99</a>
+                    <div id="hours" class="hours-content reveal">
+                        <h2 class="section-title" data-lang-az="İş Saatları" data-lang-ru="Часы Работы" data-lang-en="Opening Hours">İş Saatları</h2>
+                        <div class="hours-card">
+                            <ul class="hours-list">
+                                <li><span>Bazar ertəsi</span> <span>9 AM – 11 PM</span></li>
+                                <li><span>Çərşənbə axşamı</span> <span>9 AM – 11 PM</span></li>
+                                <li><span>Çərşənbə</span> <span>9 AM – 11 PM</span></li>
+                                <li><span>Cümə axşamı</span> <span>9 AM – 11 PM</span></li>
+                                <li><span>Cümə</span> <span>9 AM – 11 PM</span></li>
+                                <li><span>Şənbə</span> <span>9 AM – 11 PM</span></li>
+                                <li><span>Bazar</span> <span>9 AM – 11 PM</span></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="directions-card">
-                    <p data-lang-key="contact-get-directions">Bizi xəritədə tapın və yol tarifi alın!</p>
-                    <a href="https://www.google.com/maps?cid=16653742969941550049" target="_blank" rel="noopener noreferrer" class="btn" id="directions-card-btn" data-lang-key="get-directions-button">Yol tarifi al</a>
                 </div>
             </div>
         </section>
@@ -860,13 +538,59 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2023 Shakespeare Coffee & Bistro. All rights reserved.</p>
-            <p>
-                Created by <a href="https://instagram.com/tarlan.dev" target="_blank" rel="noopener noreferrer">@tarlan.dev</a> |
-                Email: <a href="mailto:heyderovtarlan@gmail.com">heyderovtarlan@gmail.com</a>
-            </p>
-            <p class="footer-note" data-lang-key="footer-note">Bu sayt nümunə olaraq hazırlanmışdır.</p>
+            <div class="footer-credits">
+                Dizayn & Kod: <a href="https://instagram.com/tarlan.dev" target="_blank" rel="noopener">@tarlan.dev</a> / <a href="mailto:heyderovtarlan@gmail.com">heyderovtarlan@gmail.com</a>
+            </div>
+            <div class="footer-note">
+                Bu sayt nümunə olaraq hazırlanmışdır.
+            </div>
         </div>
     </footer>
+
+    <script>
+        // Language Toggle
+        const translations = {};
+        document.querySelectorAll('[data-lang-az]').forEach(el => {
+            translations[el.getAttribute('data-lang-az')] = {
+                az: el.getAttribute('data-lang-az'),
+                ru: el.getAttribute('data-lang-ru'),
+                en: el.getAttribute('data-lang-en')
+            };
+        });
+
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll(`[data-lang-${lang}]`).forEach(el => {
+                el.textContent = el.getAttribute(`data-lang-${lang}`);
+            });
+            
+            document.querySelectorAll('.lang-toggle button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`.lang-toggle button[onclick="changeLanguage('${lang}')"]`).classList.add('active');
+        }
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
