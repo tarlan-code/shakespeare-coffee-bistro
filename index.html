@@ -1,144 +1,645 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Shakespeare Coffee &amp; Bistro — Coffee shop</title>
-<meta name="description" content="Shakespeare Coffee &amp; Bistro — 11 Aziz Aliyev St, Baku 1000. 4.5★ (526 rəy).">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--a:#5b3a29;--b:#a87044;--accent:#c08552;--bg:#fbf7f2;--ink:#1d1d1f;--muted:#6b6b70;}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
-h1,h2,h3{font-family:'Poppins',Inter,serif;line-height:1.15}
-.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
-.narrow{max-width:680px}
-header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-bottom:1px solid #0001}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1080px;margin:0 auto;padding:0 22px}
-.brand{font-family:'Poppins',serif;font-weight:700;color:var(--a);font-size:1.15rem;text-decoration:none}
-.menu{display:flex;gap:22px;align-items:center}
-.menu a{color:var(--ink);text-decoration:none;font-size:.92rem;font-weight:500}
-.menu a:hover{color:var(--accent)}
-.langs{display:flex;gap:4px;margin-left:10px}
-.lang-btn{border:1px solid var(--a);background:none;color:var(--a);border-radius:6px;padding:3px 8px;font-size:.74rem;font-weight:600;cursor:pointer}
-.lang-btn.active{background:var(--a);color:#fff}
-.burger{display:none;font-size:1.6rem;background:none;border:none;color:var(--a);cursor:pointer}
-.hero{min-height:92vh;display:flex;align-items:center;position:relative;color:#fff;text-align:center;padding:90px 0 40px}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(20,10,5,.55),rgba(20,10,5,.65)),url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAGDNifmnkpK1kX1AMYRqmnlqen7sJEe3HK1fgfvtxBc1YTu4a96x-RPUgT49bqvC2oRM5Irsrjv8IOUj7hwBdbCdbwVSrxvg-0q77gIQl3emArRN3LeP_xpS0ujkjtrUuvqSYjj=w1600-h900-k-no');background-size:cover;background-position:center;z-index:-1}
-.hero h1{font-size:clamp(2.2rem,6vw,4rem);margin-bottom:14px;text-shadow:0 2px 20px #0006}
-.hero .tag{font-size:1.05rem;opacity:.95;margin-bottom:18px}
-.rating{display:inline-flex;align-items:center;gap:10px;background:#fff2;border:1px solid #fff4;padding:8px 16px;border-radius:40px;margin-bottom:26px;font-weight:600}
-.rating .num{font-size:1.2rem}.rating .st{color:#ffc83d}
-.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:10px;font-weight:600;text-decoration:none;font-size:.96rem;transition:.2s}
-.btn.primary{background:var(--accent);color:#fff}.btn.primary:hover{filter:brightness(1.08)}
-.btn.ghost{background:#fff;color:var(--a)}.btn.ghost:hover{background:#fff;transform:translateY(-1px)}
-.sec{padding:72px 0}.sec.alt{background:#fff}
-.sec h2{font-size:clamp(1.6rem,4vw,2.3rem);color:var(--a);margin-bottom:28px;text-align:center}
-.about p{font-size:1.08rem;color:#3a3a3f;max-width:760px;margin:0 auto;text-align:center}
-.feats{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;max-width:840px;margin:0 auto}
-.feats li{background:var(--bg);border:1px solid #0000000d;border-left:3px solid var(--accent);padding:13px 16px;border-radius:8px;font-weight:500}
-.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:24px}
-.chip{background:var(--a);color:#fff;padding:5px 14px;border-radius:30px;font-size:.82rem}
-.grid-gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
-.gimg{height:210px;background-size:cover;background-position:center;border-radius:12px;cursor:pointer;transition:.3s;box-shadow:0 4px 16px #0001}
-.gimg:hover{transform:scale(1.02)}
-.grid-rev{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
-.rev{background:var(--bg);border:1px solid #0000000d;border-radius:14px;padding:22px}
-.rev .stars{color:#ffc83d;margin-bottom:8px}
-.rev p{color:#3a3a3f;font-size:.97rem;margin-bottom:12px}
-.rev cite{color:var(--muted);font-style:normal;font-weight:600;font-size:.9rem}
-.hours{width:100%;border-collapse:collapse}
-.hours tr{border-bottom:1px solid #0000000f}
-.hours th{text-align:left;padding:12px 0;font-weight:600}
-.hours td{text-align:right;padding:12px 0;color:var(--muted)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:880px;margin:0 auto}
-.cinfo{display:flex;flex-direction:column;gap:18px}
-.cinfo .row{display:flex;gap:12px;align-items:flex-start}
-.cinfo .ico{width:40px;height:40px;flex:0 0 40px;background:var(--a);color:#fff;border-radius:10px;display:grid;place-items:center;font-size:1.1rem}
-.cinfo a{color:var(--a);text-decoration:none;font-weight:600}
-.mapcard{border-radius:14px;overflow:hidden;min-height:240px;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;color:#fff;text-decoration:none;text-align:center;padding:20px}
-footer{background:var(--a);color:#fff;text-align:center;padding:34px 22px;font-size:.9rem}
-footer .demo{opacity:.7;font-size:.8rem;margin-top:8px}
-footer a{color:#fff;font-weight:600}
-@media(max-width:760px){.menu{position:fixed;top:64px;left:0;right:0;flex-direction:column;background:#fff;padding:16px;gap:14px;transform:translateY(-150%);transition:.3s;box-shadow:0 10px 30px #0002}.menu.open{transform:translateY(0)}.burger{display:block}.contact-grid{grid-template-columns:1fr}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Shakespeare Coffee & Bistro - Baku</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: hsl(30, 25%, 25%); /* Dark warm brown */
+            --accent-color: hsl(15, 70%, 50%); /* Warm orange-red */
+            --background-color: hsl(40, 30%, 98%); /* Off-white/cream */
+            --text-color: hsl(30, 15%, 15%); /* Very dark brown */
+            --light-text-color: hsl(40, 15%, 85%);
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+            color: var(--primary-color);
+            margin-bottom: 0.8em;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 2.8em; }
+        h2 { font-size: 2.2em; }
+        h3 { font-size: 1.8em; }
+
+        section {
+            padding: 4em 1em;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 1em 1em;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px var(--shadow-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header .logo {
+            font-family: 'Lora', serif;
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--background-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5em;
+        }
+
+        nav a {
+            color: var(--light-text-color);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--background-color);
+            text-decoration: none;
+        }
+
+        .lang-switcher {
+            position: relative;
+            display: inline-block;
+            margin-left: 1em;
+        }
+
+        .lang-switcher select {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.5em 0.8em;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9em;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-6.5%200-12.1%204.6-13%2011.1-1%206.5%203.8%2012.2%2010.3%2013l126.6%20127.9c5.6%205.6%2014.1%205.6%2019.7%200L287%2081.7c6.5-6.5%206.5-17.2%200-23.7z%22%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-position: right 0.7em top 50%, 0 0;
+            background-size: 0.65em auto, 100%;
+            padding-right: 2em; /* Adjust to prevent text overlapping arrow */
+        }
+
+        .lang-switcher select:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--background-color);
+        }
+
+        /* Hero Section */
+        #hero {
+            background-image: linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.6)), url("https://lh3.googleusercontent.com/gps-cs-s/APNQkAGDNifmnkpK1kX1AMYRqmnlqen7sJEe3HK1fgfvtxBc1YTu4a96x-RPUgT49bqvC2oRM5Irsrjv8IOUj7hwBdbCdbwVSrxvg-0q77gIQl3emArRN3LeP_xpS0ujkjtrUuvqSYjj=w1600-h900-k-no");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 70vh;
+            padding: 2em 1em;
+        }
+
+        #hero h1 {
+            color: white;
+            font-size: 3.5em;
+            margin-bottom: 0.2em;
+        }
+
+        #hero p {
+            font-size: 1.3em;
+            margin-bottom: 1em;
+        }
+
+        .rating {
+            font-size: 1.1em;
+            margin-bottom: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5em;
+        }
+
+        .rating .stars {
+            color: gold;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1em;
+            margin-top: 1.5em;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8em 1.5em;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .btn.btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            background-color: hsl(15, 70%, 60%);
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        .btn.btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* About Section */
+        #about {
+            text-align: center;
+            padding: 4em 1em;
+        }
+
+        #about p {
+            max-width: 800px;
+            margin: 0.5em auto;
+            font-size: 1.1em;
+            color: var(--text-color);
+        }
+
+        /* Features Section */
+        #features {
+            background-color: var(--background-color);
+            padding: 4em 1em;
+        }
+
+        #features h2 {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5em;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            background-color: white;
+            padding: 1.5em;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 10px var(--shadow-color);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 120px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-item i { /* Placeholder for icons if desired, not required by prompt */
+            font-size: 2em;
+            color: var(--accent-color);
+            margin-bottom: 0.5em;
+        }
+
+        .feature-item p {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Opening Hours Section */
+        #hours {
+            padding: 4em 1em;
+            text-align: center;
+        }
+
+        #hours h2 {
+            margin-bottom: 1.5em;
+        }
+
+        .hours-table {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 10px var(--shadow-color);
+        }
+
+        .hours-table th, .hours-table td {
+            padding: 1em 1.5em;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+        }
+
+        .hours-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .hours-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: var(--background-color);
+            padding: 4em 1em;
+            text-align: center;
+        }
+
+        #contact h2 {
+            margin-bottom: 1.5em;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background-color: white;
+            padding: 2em;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 10px var(--shadow-color);
+            width: 100%;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            color: var(--primary-color);
+            font-size: 1.4em;
+            margin-bottom: 0.8em;
+        }
+
+        .contact-card p {
+            margin-bottom: 0.5em;
+            font-size: 1.1em;
+        }
+
+        .contact-card a {
+            font-weight: 600;
+            display: block;
+            margin-top: 0.5em;
+        }
+
+        .contact-card .btn {
+            margin-top: 1.5em;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            text-align: center;
+            padding: 2em 1em;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin-bottom: 0.5em;
+        }
+
+        footer a {
+            color: var(--background-color);
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Responsive Adjustments */
+        @media (min-width: 768px) {
+            header {
+                padding: 1em 2em;
+            }
+            .header-content {
+                flex-wrap: nowrap;
+            }
+            nav {
+                flex-grow: 1;
+                margin-left: 2em;
+            }
+            nav ul {
+                justify-content: center;
+            }
+            .lang-switcher {
+                margin-left: auto;
+            }
+            #hero h1 {
+                font-size: 4.5em;
+            }
+            #hero p {
+                font-size: 1.5em;
+            }
+            .btn-group {
+                flex-direction: row;
+            }
+            section {
+                padding: 6em 2em;
+            }
+            .contact-info {
+                flex-direction: row;
+                justify-content: center;
+                gap: 2em;
+            }
+            .contact-card {
+                width: 48%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            header nav {
+                margin-top: 1em;
+                width: 100%;
+            }
+            header nav ul {
+                flex-direction: column;
+                gap: 0.8em;
+                width: 100%;
+                text-align: center;
+            }
+            header nav a {
+                display: block;
+                padding: 0.5em 0;
+            }
+            .lang-switcher {
+                margin-top: 1em;
+                width: 100%;
+                text-align: center;
+            }
+            .lang-switcher select {
+                width: calc(100% - 2em); /* Adjust for padding on small screens */
+            }
+            #hero {
+                min-height: 80vh;
+            }
+            #hero h1 {
+                font-size: 2.8em;
+            }
+            #hero p {
+                font-size: 1.1em;
+            }
+            .btn-group {
+                flex-direction: column;
+            }
+            .btn {
+                width: 80%;
+                margin: 0 auto;
+            }
+            .feature-item {
+                min-height: 100px;
+                padding: 1em;
+            }
+        }
+    </style>
 </head>
-<body>
-<header><nav class="nav">
-  <a href="#" class="brand">Shakespeare Coffee &amp; Bistro</a>
-  <button class="burger" aria-label="menu">☰</button>
-  <div class="menu">
-    <a href="#about"><span data-i18n='{&quot;az&quot;:&quot;Haqqımızda&quot;,&quot;en&quot;:&quot;About&quot;,&quot;ru&quot;:&quot;О нас&quot;}'>Haqqımızda</span></a>
-    <a href="#menu"><span data-i18n='{&quot;az&quot;:&quot;Xidmətlər&quot;,&quot;en&quot;:&quot;Services&quot;,&quot;ru&quot;:&quot;Услуги&quot;}'>Xidmətlər</span></a>
-    
-    
-    <a href="#hours"><span data-i18n='{&quot;az&quot;:&quot;İş saatları&quot;,&quot;en&quot;:&quot;Hours&quot;,&quot;ru&quot;:&quot;Часы работы&quot;}'>İş saatları</span></a>
-    <a href="#contact"><span data-i18n='{&quot;az&quot;:&quot;Əlaqə&quot;,&quot;en&quot;:&quot;Contact&quot;,&quot;ru&quot;:&quot;Контакты&quot;}'>Əlaqə</span></a>
-    <div class="langs"><button class="lang-btn active" data-lang="az">AZ</button><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="ru">RU</button></div>
-  </div>
-</nav></header>
+<body data-lang="az">
+    <header>
+        <div class="header-content">
+            <div class="logo">Shakespeare Coffee & Bistro</div>
+            <nav>
+                <ul>
+                    <li><a href="#about" data-az="Haqqımızda" data-en="About Us" data-ru="О нас">Haqqımızda</a></li>
+                    <li><a href="#features" data-az="Xüsusiyyətlər" data-en="Features" data-ru="Особенности">Xüsusiyyətlər</a></li>
+                    <li><a href="#hours" data-az="İş Saatları" data-en="Opening Hours" data-ru="Часы работы">İş Saatları</a></li>
+                    <li><a href="#contact" data-az="Əlaqə" data-en="Contact" data-ru="Контакты">Əlaqə</a></li>
+                </ul>
+            </nav>
+            <div class="lang-switcher">
+                <select id="language-select">
+                    <option value="az">AZ</option>
+                    <option value="en">EN</option>
+                    <option value="ru">RU</option>
+                </select>
+            </div>
+        </div>
+    </header>
 
-<section class="hero"><div class="wrap">
-  <h1>Shakespeare Coffee &amp; Bistro</h1>
-  <p class="tag">Coffee shop</p>
-  <div class="rating"><span class="st">★</span><span class="num">4.5</span><span>· 526 <span data-i18n='{&quot;az&quot;:&quot;rəy&quot;,&quot;en&quot;:&quot;reviews&quot;,&quot;ru&quot;:&quot;отзывов&quot;}'>rəy</span></span></div>
-  <div class="cta">
-    <a class="btn primary" href="tel:0502500599">📞 <span data-i18n='{&quot;az&quot;:&quot;Zəng et&quot;,&quot;en&quot;:&quot;Call&quot;,&quot;ru&quot;:&quot;Позвонить&quot;}'>Zəng et</span></a>
-    <a class="btn ghost" href="https://www.google.com/maps?cid=16653742969941550049" target="_blank" rel="noopener">📍 <span data-i18n='{&quot;az&quot;:&quot;Yol tarifi&quot;,&quot;en&quot;:&quot;Directions&quot;,&quot;ru&quot;:&quot;Маршрут&quot;}'>Yol tarifi</span></a>
-  </div>
-</div></section>
+    <main>
+        <section id="hero">
+            <h1>Shakespeare Coffee & Bistro</h1>
+            <p data-az="Kofe Dükanı" data-en="Coffee Shop" data-ru="Кофейня">Kofe Dükanı</p>
+            <div class="rating">
+                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.5 ulduz (526 Google rəyi)
+            </div>
+            <div class="btn-group">
+                <a href="tel:0502500599" class="btn" data-az="Zəng et" data-en="Call Us" data-ru="Позвонить">Zəng et</a>
+                <a href="https://www.google.com/maps?cid=16653742969941550049" target="_blank" class="btn btn-secondary" data-az="Yol tarifi" data-en="Get Directions" data-ru="Проложить маршрут">Yol tarifi</a>
+            </div>
+        </section>
 
-<section id="about" class="sec about"><div class="wrap">
-  <h2><span data-i18n='{&quot;az&quot;:&quot;Haqqımızda&quot;,&quot;en&quot;:&quot;About us&quot;,&quot;ru&quot;:&quot;О нас&quot;}'>Haqqımızda</span></h2>
-  <p>Shakespeare Coffee &amp; Bistro — 11 Aziz Aliyev St, Baku 1000. 526 müştəri rəyi ilə 4.5★ qiymətləndirilib.</p>
-</div></section>
+        <section id="about">
+            <h2 data-az="Haqqımızda" data-en="About Us" data-ru="О нас">Haqqımızda</h2>
+            <p data-az="Shakespeare Coffee & Bistro, Bakının mərkəzində yerləşən, rahat və canlı bir məkandır. Biz sizə əla qəhvə, ləzzətli desertlər və geniş çay seçimi təklif edirik. Nahar və şam yeməyi üçün də müxtəlif seçimlərimiz mövcuddur. Dostlarınızla görüşmək, tək vaxt keçirmək və ya canlı musiqidən həzz almaq üçün ideal bir yerdir."
+               data-en="Shakespeare Coffee & Bistro is a cozy and vibrant spot located in the heart of Baku. We offer excellent coffee, delicious desserts, and a wide selection of teas. Our menu also features various options for lunch and dinner. It's the perfect place to meet friends, enjoy some solo time, or experience live music."
+               data-ru="Shakespeare Coffee & Bistro – это уютное и оживленное место, расположенное в самом сердце Баку. Мы предлагаем отличный кофе, вкусные десерты и широкий выбор чая. В нашем меню также представлены разнообразные блюда для обеда и ужина. Это идеальное место для встреч с друзьями, уединенного отдыха или наслаждения живой музыкой.">
+                Shakespeare Coffee & Bistro, Bakının mərkəzində yerləşən, rahat və canlı bir məkandır. Biz sizə əla qəhvə, ləzzətli desertlər və geniş çay seçimi təklif edirik. Nahar və şam yeməyi üçün də müxtəlif seçimlərimiz mövcuddur. Dostlarınızla görüşmək, tək vaxt keçirmək və ya canlı musiqidən həzz almaq üçün ideal bir yerdir.
+            </p>
+        </section>
 
-<section id="menu" class="sec"><div class="wrap"><h2><span data-i18n='{&quot;az&quot;:&quot;Xidmətlər və imkanlar&quot;,&quot;en&quot;:&quot;Services &amp; features&quot;,&quot;ru&quot;:&quot;Услуги и возможности&quot;}'>Xidmətlər və imkanlar</span></h2>
-        <ul class="feats"><li>Açıq havada oturacaq</li><li>Özünlə apar</li><li>Məkanda yemək</li><li>Geniş pivə seçimi</li><li>Əla qəhvə</li><li>Əla desertlər</li><li>Geniş çay seçimi</li><li>Canlı çıxışlar</li><li>Nahar</li><li>Şam yeməyi</li><li>Tək yemək üçün</li><li>Pivə</li></ul>
-        <div class="chips"><span class="chip">Coffee shop</span></div>
-      </div></section>
+        <section id="features">
+            <h2 data-az="Xüsusiyyətlərimiz" data-en="Our Features" data-ru="Наши особенности">Xüsusiyyətlərimiz</h2>
+            <div class="features-grid">
+                <div class="feature-item"><p data-az="Açıq havada oturacaq" data-en="Outdoor Seating" data-ru="Открытая терраса">Açıq havada oturacaq</p></div>
+                <div class="feature-item"><p data-az="Özünlə apar" data-en="Takeaway" data-ru="На вынос">Özünlə apar</p></div>
+                <div class="feature-item"><p data-az="Məkanda yemək" data-en="Dine-in" data-ru="В заведении">Məkanda yemək</p></div>
+                <div class="feature-item"><p data-az="Geniş pivə seçimi" data-en="Wide Beer Selection" data-ru="Широкий выбор пива">Geniş pivə seçimi</p></div>
+                <div class="feature-item"><p data-az="Əla qəhvə" data-en="Excellent Coffee" data-ru="Отличный кофе">Əla qəhvə</p></div>
+                <div class="feature-item"><p data-az="Əla desertlər" data-en="Excellent Desserts" data-ru="Отличные десерты">Əla desertlər</p></div>
+                <div class="feature-item"><p data-az="Geniş çay seçimi" data-en="Wide Tea Selection" data-ru="Широкий выбор чая">Geniş çay seçimi</p></div>
+                <div class="feature-item"><p data-az="Canlı çıxışlar" data-en="Live Music" data-ru="Живые выступления">Canlı çıxışlar</p></div>
+                <div class="feature-item"><p data-az="Nahar" data-en="Lunch" data-ru="Обед">Nahar</p></div>
+                <div class="feature-item"><p data-az="Şam yeməyi" data-en="Dinner" data-ru="Ужин">Şam yeməyi</p></div>
+                <div class="feature-item"><p data-az="Tək yemək üçün" data-en="Good for Solo Dining" data-ru="Подходит для одиночного посещения">Tək yemək üçün</p></div>
+                <div class="feature-item"><p data-az="Pivə" data-en="Beer" data-ru="Пиво">Pivə</p></div>
+            </div>
+        </section>
 
+        <section id="hours">
+            <h2 data-az="İş Saatları" data-en="Opening Hours" data-ru="Часы работы">İş Saatları</h2>
+            <table class="hours-table">
+                <thead>
+                    <tr>
+                        <th data-az="Gün" data-en="Day" data-ru="День">Gün</th>
+                        <th data-az="Saat" data-en="Hours" data-ru="Часы">Saat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-az="Bazar ertəsi" data-en="Monday" data-ru="Понедельник">Bazar ertəsi</td>
+                        <td>9 AM–11 PM</td>
+                    </tr>
+                    <tr>
+                        <td data-az="Çərşənbə axşamı" data-en="Tuesday" data-ru="Вторник">Çərşənbə axşamı</td>
+                        <td>9 AM–11 PM</td>
+                    </tr>
+                    <tr>
+                        <td data-az="Çərşənbə" data-en="Wednesday" data-ru="Среда">Çərşənbə</td>
+                        <td>9 AM–11 PM</td>
+                    </tr>
+                    <tr>
+                        <td data-az="Cümə axşamı" data-en="Thursday" data-ru="Четверг">Cümə axşamı</td>
+                        <td>9 AM–11 PM</td>
+                    </tr>
+                    <tr>
+                        <td data-az="Cümə" data-en="Friday" data-ru="Пятница">Cümə</td>
+                        <td>9 AM–11 PM</td>
+                    </tr>
+                    <tr>
+                        <td data-az="Şənbə" data-en="Saturday" data-ru="Суббота">Şənbə</td>
+                        <td>9 AM–11 PM</td>
+                    </tr>
+                    <tr>
+                        <td data-az="Bazar" data-en="Sunday" data-ru="Воскресенье">Bazar</td>
+                        <td>9 AM–11 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-<section id="hours" class="sec alt"><div class="wrap narrow"><h2><span data-i18n='{&quot;az&quot;:&quot;İş saatları&quot;,&quot;en&quot;:&quot;Opening hours&quot;,&quot;ru&quot;:&quot;Часы работы&quot;}'>İş saatları</span></h2>
-        <table class="hours"><tr><th>Şənbə</th><td>9 AM–11 PM</td></tr><tr><th>Bazar</th><td>9 AM–11 PM</td></tr><tr><th>Bazar ertəsi</th><td>9 AM–11 PM</td></tr><tr><th>Çərşənbə axşamı</th><td>9 AM–11 PM</td></tr><tr><th>Çərşənbə</th><td>9 AM–11 PM</td></tr><tr><th>Cümə axşamı</th><td>9 AM–11 PM</td></tr><tr><th>Cümə</th><td>9 AM–11 PM</td></tr></table>
-      </div></section>
+        <section id="contact">
+            <h2 data-az="Əlaqə" data-en="Contact Us" data-ru="Контакты">Əlaqə</h2>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3 data-az="Ünvan" data-en="Address" data-ru="Адрес">Ünvan</h3>
+                    <p>11 Aziz Aliyev St, Baku 1000</p>
+                    <a href="https://www.google.com/maps?cid=16653742969941550049" target="_blank" class="btn" data-az="Yol tarifi al" data-en="Get Directions" data-ru="Проложить маршрут">Yol tarifi al</a>
+                </div>
+                <div class="contact-card">
+                    <h3 data-az="Telefon" data-en="Phone" data-ru="Телефон">Telefon</h3>
+                    <p>050 250 05 99</p>
+                    <a href="tel:0502500599" class="btn" data-az="Zəng et" data-en="Call Us" data-ru="Позвонить">Zəng et</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<section id="contact" class="sec"><div class="wrap">
-  <h2><span data-i18n='{&quot;az&quot;:&quot;Əlaqə&quot;,&quot;en&quot;:&quot;Contact&quot;,&quot;ru&quot;:&quot;Контакты&quot;}'>Əlaqə</span></h2>
-  <div class="contact-grid">
-    <div class="cinfo">
-      <div class="row"><div class="ico">📍</div><div><strong><span data-i18n='{&quot;az&quot;:&quot;Ünvan&quot;,&quot;en&quot;:&quot;Address&quot;,&quot;ru&quot;:&quot;Адрес&quot;}'>Ünvan</span></strong><br>11 Aziz Aliyev St, Baku 1000</div></div>
-      <div class="row"><div class="ico">📞</div><div><strong><span data-i18n='{&quot;az&quot;:&quot;Telefon&quot;,&quot;en&quot;:&quot;Phone&quot;,&quot;ru&quot;:&quot;Телефон&quot;}'>Telefon</span></strong><br><a href="tel:0502500599">050 250 05 99</a></div></div>
-    </div>
-    <a class="mapcard" href="https://www.google.com/maps?cid=16653742969941550049" target="_blank" rel="noopener"><div>🗺️<br><strong><span data-i18n='{&quot;az&quot;:&quot;Yol tarifi&quot;,&quot;en&quot;:&quot;Directions&quot;,&quot;ru&quot;:&quot;Маршрут&quot;}'>Yol tarifi</span></strong></div></a>
-  </div>
-</div></section>
+    <footer>
+        <p data-az="Bu sayt nümunə olaraq hazırlanmışdır." data-en="This site was prepared as a demo." data-ru="Этот сайт был подготовлен как демонстрационный.">Bu sayt nümunə olaraq hazırlanmışdır.</p>
+        <p>
+            Developed by <a href="https://instagram.com/tarlan.dev" target="_blank">tarlan.dev</a>
+            (Instagram: <a href="https://instagram.com/tarlan.dev" target="_blank">@tarlan.dev</a> | Email: <a href="mailto:heyderovtarlan@gmail.com">heyderovtarlan@gmail.com</a>)
+        </p>
+    </footer>
 
-<footer>
-  <div>© 2026 Shakespeare Coffee &amp; Bistro</div>
-  <div class="demo"><span data-i18n='{&quot;az&quot;:&quot;Bu sayt nümunə olaraq hazırlanmışdır.&quot;,&quot;en&quot;:&quot;This website was created as a demo.&quot;,&quot;ru&quot;:&quot;Этот сайт создан в качестве примера.&quot;}'>Bu sayt nümunə olaraq hazırlanmışdır.</span> · <a href="https://instagram.com/tarlan.dev" target="_blank" rel="noopener">tarlan.dev</a></div>
-  <div class="demo">Instagram: <a href="https://instagram.com/tarlan.dev" target="_blank" rel="noopener">@tarlan.dev</a> · <a href="mailto:heyderovtarlan@gmail.com">heyderovtarlan@gmail.com</a></div>
-</footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const langSelect = document.getElementById('language-select');
+            const translatableElements = document.querySelectorAll('[data-az], [data-en], [data-ru]');
+            const body = document.body;
 
-<script>
-const I18N={&quot;az&quot;:{&quot;nav_about&quot;:&quot;Haqqımızda&quot;,&quot;nav_menu&quot;:&quot;Xidmətlər&quot;,&quot;nav_gallery&quot;:&quot;Qalereya&quot;,&quot;nav_reviews&quot;:&quot;Rəylər&quot;,&quot;nav_hours&quot;:&quot;İş saatları&quot;,&quot;nav_contact&quot;:&quot;Əlaqə&quot;,&quot;cta_call&quot;:&quot;Zəng et&quot;,&quot;cta_directions&quot;:&quot;Yol tarifi&quot;,&quot;hero_reviews&quot;:&quot;rəy&quot;,&quot;based_on&quot;:&quot;əsasında&quot;,&quot;about_t&quot;:&quot;Haqqımızda&quot;,&quot;menu_t&quot;:&quot;Xidmətlər və imkanlar&quot;,&quot;gallery_t&quot;:&quot;Qalereya&quot;,&quot;reviews_t&quot;:&quot;Müştəri rəyləri&quot;,&quot;hours_t&quot;:&quot;İş saatları&quot;,&quot;contact_t&quot;:&quot;Əlaqə&quot;,&quot;address&quot;:&quot;Ünvan&quot;,&quot;phone&quot;:&quot;Telefon&quot;,&quot;open_now&quot;:&quot;Açıqdır&quot;,&quot;closed_now&quot;:&quot;Bağlıdır&quot;,&quot;contact_lead&quot;:&quot;Bizimlə əlaqə saxlayın və ya birbaşa gəlin — sizi gözləyirik.&quot;,&quot;demo_note&quot;:&quot;Bu sayt nümunə olaraq hazırlanmışdır.&quot;},&quot;ru&quot;:{&quot;nav_about&quot;:&quot;О нас&quot;,&quot;nav_menu&quot;:&quot;Услуги&quot;,&quot;nav_gallery&quot;:&quot;Галерея&quot;,&quot;nav_reviews&quot;:&quot;Отзывы&quot;,&quot;nav_hours&quot;:&quot;Часы работы&quot;,&quot;nav_contact&quot;:&quot;Контакты&quot;,&quot;cta_call&quot;:&quot;Позвонить&quot;,&quot;cta_directions&quot;:&quot;Маршрут&quot;,&quot;hero_reviews&quot;:&quot;отзывов&quot;,&quot;based_on&quot;:&quot;на основе&quot;,&quot;about_t&quot;:&quot;О нас&quot;,&quot;menu_t&quot;:&quot;Услуги и возможности&quot;,&quot;gallery_t&quot;:&quot;Галерея&quot;,&quot;reviews_t&quot;:&quot;Отзывы клиентов&quot;,&quot;hours_t&quot;:&quot;Часы работы&quot;,&quot;contact_t&quot;:&quot;Контакты&quot;,&quot;address&quot;:&quot;Адрес&quot;,&quot;phone&quot;:&quot;Телефон&quot;,&quot;open_now&quot;:&quot;Открыто&quot;,&quot;closed_now&quot;:&quot;Закрыто&quot;,&quot;contact_lead&quot;:&quot;Свяжитесь с нами или приходите напрямую — мы вас ждём.&quot;,&quot;demo_note&quot;:&quot;Этот сайт создан в качестве примера.&quot;},&quot;en&quot;:{&quot;nav_about&quot;:&quot;About&quot;,&quot;nav_menu&quot;:&quot;Services&quot;,&quot;nav_gallery&quot;:&quot;Gallery&quot;,&quot;nav_reviews&quot;:&quot;Reviews&quot;,&quot;nav_hours&quot;:&quot;Hours&quot;,&quot;nav_contact&quot;:&quot;Contact&quot;,&quot;cta_call&quot;:&quot;Call&quot;,&quot;cta_directions&quot;:&quot;Directions&quot;,&quot;hero_reviews&quot;:&quot;reviews&quot;,&quot;based_on&quot;:&quot;based on&quot;,&quot;about_t&quot;:&quot;About us&quot;,&quot;menu_t&quot;:&quot;Services &amp; features&quot;,&quot;gallery_t&quot;:&quot;Gallery&quot;,&quot;reviews_t&quot;:&quot;Customer reviews&quot;,&quot;hours_t&quot;:&quot;Opening hours&quot;,&quot;contact_t&quot;:&quot;Contact&quot;,&quot;address&quot;:&quot;Address&quot;,&quot;phone&quot;:&quot;Phone&quot;,&quot;open_now&quot;:&quot;Open&quot;,&quot;closed_now&quot;:&quot;Closed&quot;,&quot;contact_lead&quot;:&quot;Get in touch or just drop by — we look forward to seeing you.&quot;,&quot;demo_note&quot;:&quot;This website was created as a demo.&quot;}};
-document.querySelector('.burger')?.addEventListener('click',()=>document.querySelector('.menu').classList.toggle('open'));
-document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.menu').classList.remove('open')));
-document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',()=>{
-  const lang=btn.dataset.lang;
-  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b===btn));
-  document.documentElement.lang=lang;
-  document.querySelectorAll('[data-i18n]').forEach(el=>{try{const d=JSON.parse(el.getAttribute('data-i18n'));if(d[lang])el.textContent=d[lang];}catch(e){}});
-}));
-document.querySelectorAll('.gimg').forEach(g=>g.addEventListener('click',()=>{
-  const o=document.createElement('div');o.style.cssText='position:fixed;inset:0;background:#000d;z-index:99;display:grid;place-items:center;cursor:zoom-out;padding:20px';
-  o.innerHTML='<img src="'+g.dataset.full+'" style="max-width:96%;max-height:92%;border-radius:12px">';
-  o.addEventListener('click',()=>o.remove());document.body.appendChild(o);
-}));
-</script>
+            const setLanguage = (lang) => {
+                body.dataset.lang = lang;
+                translatableElements.forEach(element => {
+                    if (element.dataset[lang]) {
+                        element.textContent = element.dataset[lang];
+                    }
+                });
+                // Special handling for HTML lang attribute
+                document.documentElement.lang = lang;
+            };
+
+            langSelect.addEventListener('change', (event) => {
+                setLanguage(event.target.value);
+            });
+
+            // Set initial language based on browser or default to AZ
+            const browserLang = navigator.language.split('-')[0];
+            if (['en', 'ru'].includes(browserLang)) {
+                langSelect.value = browserLang;
+                setLanguage(browserLang);
+            } else {
+                setLanguage('az'); // Default to AZ
+            }
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
